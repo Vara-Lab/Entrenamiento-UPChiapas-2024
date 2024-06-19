@@ -62,7 +62,7 @@ pub enum FTAction {
 
 ```
 
-### PASO 2 Definir las eventos para el contrato: .
+### PASO 2 Definir los eventos para el contrato gRC-20:
 **comando:**
 ```rust
 #[derive(Debug, Encode, Decode, TypeInfo)]
@@ -96,7 +96,7 @@ pub enum FTReply {
 ```
 
 
-### PASO 3 Definimos la estrcutura del Estado parcial
+### PASO 3 Definimos la estructura del Estado parcial
 **comando:**
 ```rust
 #[derive(Encode, Decode, TypeInfo)]
@@ -241,22 +241,7 @@ struct FungibleToken {
 static mut FUNGIBLE_TOKEN: Option<FungibleToken> = None;
 ```
 
-
-### PASO 2 Creamos la función para volver mutable el estado.
-**comando:**
-```rust
-
-fn scrow_state_mut() -> &'static mut Escrow {
-
-    let state = unsafe {  ESCROW.as_mut()};
-
-    unsafe { state.unwrap_unchecked() }
-
-
-}
-```
-
-### PASO 3 Como el estado es un struct podemos hacerle implementaciones.
+### PASO 2 Como el estado es un struct podemos hacerle implementaciones.
 **comando:**
 ```rust
 impl FungibleToken {
@@ -496,7 +481,7 @@ impl FungibleToken {
 
 ```
 
-### PASO 4 Definimos la funcion Init()
+### PASO 3 Definimos la función Init()
 **comando:**
 ```rust
  let init_config: InitConfig = msg::load().expect("Unable to decode InitConfig");
@@ -535,7 +520,7 @@ impl FungibleToken {
 ```
 
 
-### PASO 5 Definimos la funcion Handle()
+### PASO 4 Definimos la función Handle()
 **comando:**
 ```rust
 #[no_mangle]
