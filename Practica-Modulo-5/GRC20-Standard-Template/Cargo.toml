@@ -1,0 +1,16 @@
+[package]
+name = "fungible-token"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+fungible-token-io = { path = "io" }
+gstd = { git = "https://github.com/gear-tech/gear.git",tag = "v1.1.0" }
+
+[dev-dependencies]
+gstd = { git = "https://github.com/gear-tech/gear.git",tag = "v1.1.0" }
+gtest = { git = "https://github.com/gear-tech/gear.git",tag = "v1.1.0" }
+
+[build-dependencies]
+fungible-token-io = { path = "io" }
+gear-wasm-builder = { git = "https://github.com/gear-tech/gear.git",tag = "v1.1.0" }
