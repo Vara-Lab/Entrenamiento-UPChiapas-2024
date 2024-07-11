@@ -301,8 +301,6 @@ async fn main(){
     }
 
 ```
-
-```
 # Deploy the Contract on the IDEA Platform and Interact with Your Contract
 
 ## Step 1: Open Contract on Gitpod
