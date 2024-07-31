@@ -1,0 +1,10 @@
+[package]
+name = "ping-no-wallet-io"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+gstd.workspace = true
+gmeta.workspace = true
+#gear-lib.workspace = true
+
